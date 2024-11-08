@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,9 +7,16 @@
     <title>HomePage</title>
   </head>
   <body>
-    <nav>
-      <span>Bandage</span>
-
+    <nav class="desktop">
+      <div class="title">
+        <span>Bandage</span>
+        <!-- <div class="icons-mobile">
+          <img src="public/icons/search.png" alt="search" />
+          <img src="public/icons/shoppingCart.png" alt="cart" />
+          <img src="public/icons/menu.png" class="menu-toggle" alt="menu" />
+        </div> -->
+      </div>
+      <!-- <div class="menu"> -->
       <div id="nav-links">
         <a href="#">Home</a>
         <a href="#">Shop</a>
@@ -24,15 +31,37 @@
         <img src="public/icons/shoppingCart.png" alt="cart" />
         <img src="public/icons/heart.png" alt="like" />
       </div>
+      <!-- </div> -->
     </nav>
-    <div id="carrosel">
-      <div id="carrosel-center">
+
+    <nav class="mobile">
+      <div class="title">
+        <span>Bandage</span>
+        <div class="icons-mobile">
+          <img src="public/icons/search.png" alt="search" />
+          <img src="public/icons/shoppingCart.png" alt="cart" />
+          <img src="public/icons/menu.png" class="menu-toggle" alt="menu" />
+        </div>
+      </div>
+      <div class="menu">
+        <div id="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Product</a>
+          <a href="#">Pricing</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="carousel">
+      <div id="carousel-center">
         <svg
           width="100"
           height="100"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          id="carousel-left"
         >
           <path
             d="M15 19L7 12L15 5"
@@ -42,7 +71,7 @@
             stroke-linejoin="round"
           />
         </svg>
-        <div id="carrosel-info">
+        <div id="carousel-info">
           <h2>GROCERIES DELIVERY</h2>
           <p>
             We know how large objects will act, but things on a small scale just
@@ -56,6 +85,7 @@
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          id="carousel-right"
         >
           <path
             d="M9 5L17 12L9 19"
@@ -72,29 +102,33 @@
         <span class="dot"></span>
       </div>
     </div>
-    <div id="section-products">
-      <div class="card image-1">
-        <div>
-          <span>Your Space</span>
-          <h3>Product 1</h3>
-          <p>Explore Items</p>
+
+    <section class="section">
+      <div class="row space-between">
+        <div class="card-product-bg image-1">
+          <div>
+            <span>Your Space</span>
+            <h3>Product 1</h3>
+            <p>Explore Items</p>
+          </div>
+        </div>
+        <div class="card-product-bg image-2">
+          <div>
+            <span>Your Space</span>
+            <h3>Product 2</h3>
+            <p>Explore Items</p>
+          </div>
+        </div>
+        <div class="card-product-bg image-3">
+          <div>
+            <span>Your Space</span>
+            <h3>Product 3</h3>
+            <p>Explore Items</p>
+          </div>
         </div>
       </div>
-      <div class="card image-2">
-        <div>
-          <span>Your Space</span>
-          <h3>Product 2</h3>
-          <p>Explore Items</p>
-        </div>
-      </div>
-      <div class="card image-3">
-        <div>
-          <span>Your Space</span>
-          <h3>Product 3</h3>
-          <p>Explore Items</p>
-        </div>
-      </div>
-    </div>
+    </section>
+
     <section class="section section-shop">
       <aside>
         <h2>Furniture</h2>
@@ -429,29 +463,31 @@
             <img src="public/images/image4.png" alt="img4" />
             <span class="badge">new</span>
           </div>
-          <div class="row">
-            <p class="tab active">Google</p>
-            <p class="tab">Trending</p>
-            <p class="tab">New</p>
-          </div>
-          <h4>Loudest à la Madison #1 (L'integral)</h4>
-          <p>
-            We focus on ergonomics and meeting you where you work. It's only a
-            keystroke away.
-          </p>
-          <div class="row space-between statistics">
-            <div class="row">
-              <img src="public/icons/clock.png" alt="time" />
-              <p>22 April 2021</p>
+          <div class="card-info">
+            <div class="row-fixed start">
+              <p class="tab active">Google</p>
+              <p class="tab">Trending</p>
+              <p class="tab">New</p>
             </div>
-            <div class="row">
-              <img src="public/icons/chart.png" alt="comments" />
-              <p>10 comments</p>
+            <h4>Loudest à la Madison #1 (L'integral)</h4>
+            <p>
+              We focus on ergonomics and meeting you where you work. It's only a
+              keystroke away.
+            </p>
+            <div class="row-fixed space-between statistics">
+              <div class="row-fixed">
+                <img src="public/icons/clock.png" alt="time" />
+                <p>22 April 2021</p>
+              </div>
+              <div class="row-fixed">
+                <img src="public/icons/chart.png" alt="comments" />
+                <p>10 comments</p>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <p>Learn More</p>
-            <img src="public/icons/arrow-right.png" alt="arrow-right" />
+            <div class="row-fixed start">
+              <p>Learn More</p>
+              <img src="public/icons/arrow-right.png" alt="arrow-right" />
+            </div>
           </div>
         </li>
         <li class="card">
@@ -459,29 +495,31 @@
             <img src="public/images/image-6.png" alt="img4" />
             <span class="badge">new</span>
           </div>
-          <div class="row">
-            <p class="tab active">Google</p>
-            <p class="tab">Trending</p>
-            <p class="tab">New</p>
-          </div>
-          <h4>Loudest à la Madison #1 (L'integral)</h4>
-          <p>
-            We focus on ergonomics and meeting you where you work. It's only a
-            keystroke away.
-          </p>
-          <div class="row space-between statistics">
-            <div class="row">
-              <img src="public/icons/clock.png" alt="time" />
-              <p>22 April 2021</p>
+          <div class="card-info">
+            <div class="row-fixed start">
+              <p class="tab active">Google</p>
+              <p class="tab">Trending</p>
+              <p class="tab">New</p>
             </div>
-            <div class="row">
-              <img src="public/icons/chart.png" alt="comments" />
-              <p>10 comments</p>
+            <h4>Loudest à la Madison #1 (L'integral)</h4>
+            <p>
+              We focus on ergonomics and meeting you where you work. It's only a
+              keystroke away.
+            </p>
+            <div class="row-fixed space-between statistics">
+              <div class="row-fixed">
+                <img src="public/icons/clock.png" alt="time" />
+                <p>22 April 2021</p>
+              </div>
+              <div class="row-fixed">
+                <img src="public/icons/chart.png" alt="comments" />
+                <p>10 comments</p>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <p>Learn More</p>
-            <img src="public/icons/arrow-right.png" alt="arrow-right" />
+            <div class="row-fixed start">
+              <p>Learn More</p>
+              <img src="public/icons/arrow-right.png" alt="arrow-right" />
+            </div>
           </div>
         </li>
         <li class="card">
@@ -489,29 +527,31 @@
             <img src="public/images/image-7.png" alt="img4" />
             <span class="badge">new</span>
           </div>
-          <div class="row">
-            <p class="tab active">Google</p>
-            <p class="tab">Trending</p>
-            <p class="tab">New</p>
-          </div>
-          <h4>Loudest à la Madison #1 (L'integral)</h4>
-          <p>
-            We focus on ergonomics and meeting you where you work. It's only a
-            keystroke away.
-          </p>
-          <div class="row space-between statistics">
-            <div class="row">
-              <img src="public/icons/clock.png" alt="time" />
-              <p>22 April 2021</p>
+          <div class="card-info start">
+            <div class="row-fixed start">
+              <p class="tab active">Google</p>
+              <p class="tab">Trending</p>
+              <p class="tab">New</p>
             </div>
-            <div class="row">
-              <img src="public/icons/chart.png" alt="comments" />
-              <p>10 comments</p>
+            <h4>Loudest à la Madison #1 (L'integral)</h4>
+            <p>
+              We focus on ergonomics and meeting you where you work. It's only a
+              keystroke away.
+            </p>
+            <div class="row-fixed space-between statistics">
+              <div class="row-fixed">
+                <img src="public/icons/clock.png" alt="time" />
+                <p>22 April 2021</p>
+              </div>
+              <div class="row-fixed">
+                <img src="public/icons/chart.png" alt="comments" />
+                <p>10 comments</p>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <p>Learn More</p>
-            <img src="public/icons/arrow-right.png" alt="arrow-right" />
+            <div class="row-fixed start">
+              <p>Learn More</p>
+              <img src="public/icons/arrow-right.png" alt="arrow-right" />
+            </div>
           </div>
         </li>
       </ul>
@@ -579,5 +619,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
