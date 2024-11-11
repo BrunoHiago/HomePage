@@ -10,13 +10,7 @@
     <nav class="desktop">
       <div class="title">
         <span>Bandage</span>
-        <!-- <div class="icons-mobile">
-          <img src="public/icons/search.png" alt="search" />
-          <img src="public/icons/shoppingCart.png" alt="cart" />
-          <img src="public/icons/menu.png" class="menu-toggle" alt="menu" />
-        </div> -->
       </div>
-      <!-- <div class="menu"> -->
       <div id="nav-links">
         <a href="#">Home</a>
         <a href="#">Shop</a>
@@ -104,7 +98,7 @@
     </div>
 
     <section class="section">
-      <div class="row space-between">
+      <div class="row space-evenly">
         <div class="card-product-bg image-1">
           <div>
             <span>Your Space</span>
@@ -137,16 +131,17 @@
       <article>
         <header>
           <h2>BESTSELLER PRODUCTS</h2>
-          <ul>
-            <li><a href="#" class="active">Men</a></li>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Accessories</a></li>
+          <ul id="list-cat">
+            <li><a class="categories1 active">Men</a></li>
+            <li><a class="categories1">Women</a></li>
+            <li><a class="categories1">Accessories</a></li>
           </ul>
           <div>
             <svg
               width="100"
               height="100"
               class="disabled"
+              id="arrow-left-best1"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -165,6 +160,7 @@
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              id="arrow-right-best1"
             >
               <path
                 d="M9 5L17 12L9 19"
@@ -177,7 +173,7 @@
           </div>
         </header>
         <hr />
-        <div class="products">
+        <div class="products list1">
           <div class="card-product">
             <img src="public/images/product-1.png" alt="product1" />
             <div>
@@ -241,7 +237,10 @@
             We focus on ergonomics and meeting you where you work. It's only a
             keystroke away.
           </p>
-          <img src="public/images/image-meat.png" alt="meat" />
+          <div class="img">
+            <img src="public/images/image-meat.png" alt="meat" />
+          </div>
+
           <h4>English Department</h4>
           <p class="prices">$16.48<span>$6.48</span></p>
         </div>
@@ -286,16 +285,17 @@
       <article>
         <header>
           <h2>BESTSELLER PRODUCTS</h2>
-          <ul>
-            <li><a href="#" class="active">Men</a></li>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Accessories</a></li>
+          <ul id="list-cat2">
+            <li><a class="active">Men</a></li>
+            <li><a>Women</a></li>
+            <li><a>Accessories</a></li>
           </ul>
           <div>
             <svg
               width="100"
               height="100"
               class="disabled"
+              id="arrow-left-best2"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -311,6 +311,7 @@
             <svg
               width="100"
               height="100"
+              id="arrow-right-best2"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -326,7 +327,7 @@
           </div>
         </header>
         <hr />
-        <div class="products">
+        <div class="products list2">
           <div class="card-product">
             <img src="public/images/product-1.png" alt="product1" />
             <div>
@@ -390,7 +391,10 @@
             We focus on ergonomics and meeting you where you work. It's only a
             keystroke away.
           </p>
-          <img src="public/images/image-5.png" alt="candy" />
+          <div id="img-popular">
+            <img src="public/images/image-5.png" alt="candy" />
+          </div>
+
           <h4>English Department</h4>
           <div class="row">
             <img src="public/icons/Download.png" alt="Download" />
@@ -563,7 +567,7 @@
           <h2>Consulting Agency For Your Business</h2>
           <p>the quick fox jumps over the lazy dog</p>
         </header>
-        <button>Contact us</button>
+        <button id="btn-contact">Contact us</button>
       </div>
       <div class="info">
         <div class="info-column">

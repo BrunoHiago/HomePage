@@ -17,7 +17,7 @@ nav.desktop {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20px;
+  padding: 20px 10%;
   background-color: #ffffff;
   text-align: center;
 
@@ -41,20 +41,45 @@ nav.desktop {
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 500;
+    position: relative;
+  }
+
+  #nav-links a:hover,
+  #nav-icons a:hover {
+    color: #23a6f0;
+  }
+
+  #nav-links a::after,
+  #nav-icons a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #23a6f0;
+    transition: width 0.4s ease;
+  }
+
+  #nav-links a:hover::after,
+  #nav-icons a:hover::after {
+    width: 100%;
   }
 
   #nav-icons img {
     width: 35px; /* Ajuste o tamanho conforme necessário */
     margin: 10px;
+    cursor: pointer;
+  }
+
+  #nav-icons img:hover {
+    filter: brightness(0) invert(0);
+    transform: scale(1.2);
   }
 }
 
 nav.mobile {
   display: none;
-}
-
-.fade-out {
-  opacity: 0;
 }
 
 #carousel {
@@ -66,7 +91,6 @@ nav.mobile {
   background-image: url("public/images/carousel/1.png");
   background-size: cover;
   background-repeat: no-repeat;
-  transition: opacity 1s ease-in-out;
   opacity: 1;
   height: 640px;
 
@@ -357,11 +381,11 @@ nav.mobile {
   .card-product:hover {
     background-color: #f5f5f5;
     border-radius: 5px;
+    border: 1px solid #e0e0e0;
     box-shadow: 1px 1px 1px #666464;
 
     img {
       transform: scale(1.2);
-      filter: opacity(0.8);
     }
   }
 }
@@ -385,10 +409,8 @@ nav.mobile {
 
 .section-most-popular {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px;
   background-color: #ffffff;
 
   .container-most-popular {
@@ -407,6 +429,11 @@ nav.mobile {
       align-items: center;
       gap: 40px;
       height: 100%;
+
+      #img-popular:hover,
+      .img:hover {
+        transform: scale(1.1);
+      }
 
       h3 {
         font-size: 24px;
@@ -461,13 +488,13 @@ nav.mobile {
       p {
         color: #737373;
         font-weight: 400;
-        font-size: 12px;
+        font-size: 14px;
       }
 
       h4 {
         color: #252b42;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 16px;
       }
     }
   }
@@ -480,6 +507,16 @@ nav.mobile {
 .space-between {
   width: 100%;
   justify-content: space-between !important;
+}
+
+.space-evenly {
+  width: 100%;
+  justify-content: space-evenly !important;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .start {
@@ -504,7 +541,7 @@ nav.mobile {
 section {
   display: flex;
   flex-direction: column;
-  padding: 100px 15px;
+  padding: 100px 8%;
   background-color: transparent;
 }
 
@@ -669,7 +706,7 @@ footer {
   flex-direction: column;
   background-color: #252b42;
   color: #ffffff;
-  padding: 20px 15px;
+  padding: 20px 15%;
   gap: 20px;
 
   button {
@@ -758,7 +795,7 @@ footer {
 /* Responsividade */
 
 /* Ajustes para telas celulares e tablets (celulares) */
-@media (max-width: 1070px) {
+@media (max-width: 1235px) {
   nav.desktop {
     display: none;
   }
