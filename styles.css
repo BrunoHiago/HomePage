@@ -211,6 +211,10 @@ nav.mobile {
   }
 }
 
+.card-product-bg:hover {
+  transform: scale(1.1);
+}
+
 .image-1 {
   background-image: url("public/images/product-1.png");
   background-size: 183px 162px; /* Imagem ocupa metade da largura e toda a altura */
@@ -609,6 +613,16 @@ section {
     align-items: center;
     gap: 20px;
     margin: 20px 0px;
+
+    img {
+      width: 100px; /* ou qualquer tamanho desejado */
+      height: 100px;
+      object-fit: contain; /* Mantém a proporção */
+    }
+
+    img:hover {
+      transform: scale(1.3);
+    }
   }
 }
 
