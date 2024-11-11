@@ -192,6 +192,42 @@ Array.from(seletorColor.children).forEach((color, index) => {
   });
 });
 
+//============================================Featured============================================//
+
+const lista = document.querySelectorAll(".li-featured");
+
+lista.forEach((li) => {
+  Array.from(li.children).forEach((child) => {
+    child.addEventListener("click", () => {
+      Array.from(li.children).forEach((c) => {
+        c.classList.remove("active");
+      });
+      child.classList.add("active");
+    });
+  });
+});
+
+//============================================Logos============================================//
+
+const logos = document.querySelector("#logos");
+let imgLogos = [
+  "public/images/logosColor/1.png",
+  "public/images/logosColor/2.png",
+  "public/images/logosColor/3.png",
+  "public/images/logosColor/4.png",
+  "public/images/logosColor/5.png",
+  "public/images/logosColor/6.png",
+];
+
+Array.from(logos.children).forEach((logo, index) => {
+  logo.addEventListener("mouseover", () => {
+    logo.src = imgLogos[index];
+  });
+  logo.addEventListener("mouseout", () => {
+    logo.src = `public/images/logo${index + 1}.png`;
+  });
+});
+
 //============================================Footer============================================//
 
 const btnContact = document.querySelector("#btn-contact");
